@@ -2,33 +2,43 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from rest_framework.decorators import api_view
+from .serializers import UserSerializer
+from rest_framework import status
+from django.contrib.auth.models import User
+from rest_framework.authtoken.models import Token
+from rest_framework.response import Response
+from django.shortcuts import get_object_or_404
 
+
+@api_view(['POST'])
 def user_login(request):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect('home')  # Redirect to home page after login
-        else:
-            messages.error(request, 'Invalid username or password.')
-    return render(request, 'user/login.html')
+    user = get_object_or_404(User, request.data['username'])
+    if not user.check_password(request.data['password']):
+        return Response({
+            "message": "Username or password not valid"
+        }, status.HTTP_404_NOT_FOUND)
+    serializer = UserSerializer(user)
+    token, created = Token.objects.get_or_create(user=user)
+    return Response({
+        "token": token.key,
+        "user": serializer.data
+    })
 
-def user_logout(request):
-    logout(request)
-    return redirect('home')  # Redirect to home page after logout
 
+@api_view(['POST'])
 def user_signup(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f'Account created for {username}. You can now log in.')
-            return redirect('login')
+    serializer = UserSerializer(data=request.data)
+    if (serializer.is_valid()):
+        serializer.save()
+        user = User.objects.get(username=request.data['username'])
+        user.set_password(request.data['password'])
+        user.e
+        user.save()
+        token = Token.objects.create(user=user)
+        return Response({
+            "token": token.key,
+            "user": serializer.data
+        })
     else:
-        form = UserCreationForm()
-    return render(request, 'user/signup.html', {'form': form})
-
-# Define more views as needed for user profile, settings, etc.
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
