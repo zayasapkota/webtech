@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html land="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Bishal Cafe</title>
+        <link rel="stylesheet" href="cafe.css">
+        <link rel="stylesheet" href="cafe.js">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    </head>    
+    <body>
+        <header class="header">
+            <div class="container">
+               <div class="header-main">
+                  <div class="logo">
+                     <a href="index.html"><i class="fas fa-burger"></i> FoodFeed</a>
+                  </div>
+                  <div class="open-nav-menu">
+                     <span></span>
+                  </div>
+                  <div class="menu-overlay">
+                  </div>
+                  <!-- navigation menu start -->
+                  <nav class="nav-menu">
+                    <div class="close-nav-menu">
+                       <img src="img/close.svg" alt="close">
+                    </div>
+                    <ul class="menu">
+                       <li class="menu-item menu-item-has-children">
+                        <a href="#cafes" data-toggle="sub-menu"><i class="fa-solid fa-bell-concierge" id="dcafe"></i> Cafes <i class="fas fa-down-arrow"></i></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="cafes.html">Station Cafe</a></li>
+                            <li class="menu-item"><a href="cafe2.html">Manjil Cafe</a></li>
+                            <li class="menu-item"><a href="cafe3.html">Manakamana Cafe</a></li>
+                            <li class="menu-item"><a href="cafe4.html">Bishal Cafe</a></li>
+                            <li class="menu-item"><a href="cafe5.html">Matka Cafe</a></li>
+                            <li class="menu-item"><a href="cafe6.html">Hunger Kills</a></li>
+                            <li class="menu-item"><a href="cafe7.html">Sitoshna</a></li>
+                            <li class="menu-item"><a href="cafe8.html">Sarita Cafe</a></li>
+                            <li class="menu-item"><a href="cafe9.html">Janata Newari Food</a></li>
+                        </ul>
+                       </li>
+                       <li class="menu-item">
+                          <a href="#"><i class="fas fa-user" id="about-us"></i> About Us</a>
+                       </li>
+                       <li class="menu-item">
+                        <a href="login.html"> <i class="fas fa-right-to-bracket"></i> Login</a>
+                       </li>
+                       
+                    </ul>
+                  </nav>
+                  <!-- navigation menu end -->
+               </div>
+            </div>
+         </header>
+
+        <div id="cafe">
+            <div class="container">
+                <div class="row">
+                    <div class="cafe-col-1">
+                        <img src="images/lp.jpg">
+                    </div>
+                    <div class="cafe-col-2">
+                        <h1 class="subtitle">Bishal Cafe</h1>
+                       
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('info')">Information</p>
+                            <p class="tab-links" onclick="opentab('menu')">Menu</p>
+                            
+                            <p class="tab-links" onclick="opentab('location')">Location</p>
+                            <p class="tab-links" onclick="opentab('reviews')">Reviews</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="info">
+                            <ul>
+                                <li><span>Contact Number</span><br>+977 9812345678</li>
+                                <li><span>Status</span><br>Open From: 7:00 am - 9:00 pm</li>
+                                <li><span>Delivery Service Available</span><br></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="menu">
+                            <ul>
+                                <li><span>Ideal Model School</span><br>High School</li>
+                                <li><span>Kathmandu University</span><br>Undergraduate</li>
+                            </ul>
+                        </div>
+                       
+                        <div class="tab-contents " id="location">
+                            <ul>
+                                <li><span>Front End Development</span><br>HTML, CSS, JavaScript</li>
+                                <li><span>Back End Development</span><br>MySQL, Java, PHP, Python, Git</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents " id="reviews">
+                            <ul>
+                                <li><span>Front End Development</span><br>HTML, CSS, JavaScript</li>
+                                <li><span>Back End Development</span><br>MySQL, Java, PHP, Python, Git</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<!---Contact-Us--->
+<p>&nbsp;</p>
+<footer>
+    <div class="footer_main">
+
+        <div class="footer_tag">
+            <h2>Location</h2>
+            <p>Nepal</p>
+            <p>Dhulikhel, Kathmandu University</p>
+        </div>
+
+        
+
+        <div class="footer_tag">
+            <h2>Contact</h2>
+            
+            <p>+977 9812345670</p>
+            <p>food.feed123@gmail.com</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Follow Us</h2>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+
+    </div>
+
+    <p class="end">Copy Right &copy; 2023 FoodFeed | Published on: Dec 16, 2023</p>
+
+
+</footer>
+    </body>

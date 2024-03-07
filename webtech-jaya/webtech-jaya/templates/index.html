@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html land="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>FoodFeed</title>
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/cafe.css' %}">
+        <script src="{% static 'js/script.js' %}"></script>
+        <img src="{% static 'images/lpF.png' %}" alt="Image" style="width: 100%; height: auto; border-radius: 10px;">
+
+        
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="cafe.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html" class="logo"><i class="fas fa-burger"></i> FoodFeed</a>
+
+            <nav class="navbar">
+                
+                <a href="#cafes"><i class="fa-solid fa-bell-concierge" id="dcafe"></i> Cafes</a>
+                <a href="#about"><i class="fas fa-user" id="about-us"></i> About Us</a>
+                <a href="#contact"> <i class="fas fa-message" id="contact"></i> Contact Us</a>
+                <a href="{% url 'auth_login' %}">Login</a>
+
+               
+            </nav>
+        </header>
+
+        
+
+        
+      
+
+    <!---home section--->
+   
+    <section class="home" id="home">
+        <div class="container">
+           
+            <div class="wrapper">
+
+               <div class="slide">
+                
+                <div class="content">
+                    <span></span>
+                </div>
+               </div>
+
+            </div>
+        </div>
+        
+    </section>
+    
+    <!--cafes-->
+    <div id="cafes">
+        <div class="container">
+            <h1>Cafes</h1>
+            <div class="cafe-list">
+                <div class="cafe">
+                    <img src="{% static 'images/lp2.jpg' %}">
+                    <div class="layer">
+                        <h3>Station Cafe</h3>
+                        <p>A cafe for quick drinks and foods, a hangout spot for many students as well as teachers and locals.
+                        </p>
+                    
+                        <a href="{% url 'stationcafe' %}"><i class="fa-solid fa-link"></i></a>
+
+                    </div>
+                </div>
+                <div class="cafe">
+                    <img src="{% static 'images/lp2.jpg' %}">
+                    <div class="layer">
+                        <h3>Manjil Cafe</h3>
+                        <p>A cafe for quick drinks and foods, a hangout spot for many students as well as teachers and locals.
+                        </p>
+                        <a href="{% url 'manjilcafe' %}"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <img src="{% static 'images/lp2.jpg' %}">
+                    <div class="layer">
+                        <h3>Manakamana Cafe</h3>
+                        <p>A cafe for quick drinks and foods, a hangout spot for many students as well as teachers and locals.                        </p>
+                        <a href="{% url 'manakamanacafe' %}"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <img src="{% static 'images/lp2.jpg' %}">
+                    <div class="layer">
+                        <h3>Bishal Cafe</h3>
+                        <p>A cafe for quick drinks and foods, a hangout spot for many students as well as teachers and locals.
+                        </p>
+                        <a href="{% url 'bishalcafe' %}"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <img src="{% static 'images/lp2.jpg' %}">
+                    <div class="layer">
+                        <h3>Matka Cafe</h3>
+                        <p>A cafe for quick drinks and foods, a hangout spot for many students as well as teachers and locals.
+                        </p>
+                        <a href="{% url 'matkacafe' %}"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <img src="{% static 'images/lp2.jpg' %}">
+                    <div class="layer">
+                        <h3>Hunger Kills</h3>
+                        <p>A cafe for quick drinks and foods, a hangout spot for many students as well as teachers and locals.
+                        </p>
+                        <a href="{% url 'hungerkills' %}"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <img src="{% static 'images/lp2.jpg' %}">
+                    <div class="layer">
+                        <h3>Sitoshna</h3>
+                        <p>A cafe for quick drinks and foods, a hangout spot for many students as well as teachers and locals.
+                        </p>
+                        <a href="{% url 'sitoshna' %}"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <img src="{% static 'images/lp2.jpg' %}">
+                    <div class="layer">
+                        <h3>Sarita Cafe</h3>
+                        <p>A cafe for quick drinks and foods, a hangout spot for many students as well as teachers and locals.
+                        </p>
+                        <a href="{% url 'sarita' %}"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <img src="{% static 'images/lp2.jpg' %}">
+                    <div class="layer">
+                        <h3>Janata Newari Food</h3>
+                        <p>A cafe for quick drinks and foods, a hangout spot for many students as well as teachers and locals.
+                        </p>
+                        <a href="{% url 'janata' %}"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+   
+    <!--About-Us-->
+    <div class="about" id="about">
+        <h3 class="sub-heading">about us</h3>
+        <h1 class="heading"> why choose us</h1>
+
+        <div class="row">
+              <div class="image">
+              <img src="{% static 'images/lp11.png' %}">
+              </div>
+
+              <div class="content">
+                <h3></h3>
+                <p> We provide you with the variety of restaurants and cafes near you,<br>
+                    along with their respective locations, menu, status, contact details,<br>
+                    services. you can explore through your options staying home and decide<br>
+                    at your comfort.</p>
+                <p> To ease your decision making, you can go through reviews<br>
+                    of the cafes and restaurants and also leave your own views and comments to <br>
+                    suggest or warn other users. </p>
+                 <div class="icons">
+                    <i class></i>
+                 </div>
+              </div>
+        </div>
+    </div>
+    
+    
+
+   
+
+    <!---Contact-Us--->
+    <p>&nbsp;</p>
+    <footer>
+        <div class="footer_main">
+
+            <div class="footer_tag">
+                <h2>Location</h2>
+                <p>Nepal</p>
+                <p>Dhulikhel, Kathmandu University</p>
+            </div>
+
+            
+
+            <div class="footer_tag">
+                <h2>Contact</h2>
+                
+                <p>+977 9812345670</p>
+                <p>food.feed123@gmail.com</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Follow Us</h2>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+        </div>
+
+        <p class="end">Copy Right &copy; 2023 FoodFeed | Published on: Dec 16, 2023</p>
+
+
+    </footer>
+
+
+
+
+
+
+
+        <script src="js/script.js"></script>
+    </body>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogIn/SignUp Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- CSS File Link -->
+  <link rel="stylesheet" href="login.css">
+
+  <!-- Javacript file and Library Link -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="scriptlog.js"></script>
+
+  <!-- Remixicon Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo"><i class="fas fa-burger"></i> FoodFeed</a>
+</header>
+  <div class="container" id="container"> 
+
+    <!-- Sign Up Form -->
+    <div class="form-container sign-up-container">
+      <form action="#">
+        <h1>Create Account</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>or Use Your Email For Registration</span>
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button>Sign Up</button>
+      </form>
+    </div>
+
+    <!-- login Form -->
+    <div class="form-container login-container">
+      <form action="#">
+        <h1>Log In</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>or Use Your Account</span>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <a href="#">Forgot your password?</a>
+        <button>Log In</button>
+      </form>
+    </div>
+
+    <!-- Card Slider -->
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button class="ghost" id="login">Log In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hungry For More?</h1>
+          <p>Sign Up for an adventurous appetite!</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
