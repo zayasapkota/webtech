@@ -22,6 +22,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from django.contrib.auth import views as auth_views
+from . import views
+from user import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +32,15 @@ urlpatterns = [
     path('comment/', include('commentsandrating.urls')),
     path('', TemplateView.as_view(template_name='index.html'), name='home'), 
     path('login/', auth_views.LoginView.as_view(), name='auth_login'),
+    path('', views.index, name='index'),
+ 
+    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='auth_login'),
+    path('logout/', auth_views.LogoutView.as_view(), name='auth_logout'),
+    path('signup/', views.SignUpView.as_view(template_name='login.html'), name='auth_signup'),
+    path('password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),
+    
+    
+
 ]
 
 
