@@ -1,14 +1,8 @@
+# user/urls.py
 from django.urls import path
 from . import views
-from user.views import SignUpView
 
 urlpatterns = [
-    # Other URL patterns for the commentsNrating app
-   
-    path('', views.index),
-    path('login', views.user_login),
-    path('signup', views.user_signup),
-    path('signup/', SignUpView.as_view(), name='signup'),
-    
-   
+    path('login/', views.user_login, name='login'),  # URL name changed to 'login'
+    path('signup/', views.user_signup, name='signup'),  # URL name changed to 'signup'
 ]

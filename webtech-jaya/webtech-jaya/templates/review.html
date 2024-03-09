@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,64 +8,66 @@
 
     {% load static %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/review.css' %}">
 
     <title>Review</title>
 </head>
+
 <body>
-<header>
-    <a href="{% url 'home' %}">FoodFeed</a>
-</header>
-      
-<div class="bd">
-    <div class="container">
-        <div class="container__right">
-            {% if user.is_authenticated %}
-            <div class="comment-box">
-                <h2>Add your comments</h2>
-                <form action="#" method="post">
-                    {% csrf_token %}
-                    <textarea name="comments" placeholder="Type Your Comments Here."></textarea>
-                    <div class="rating">
-                        <input type="radio" id="star5" name="rating" value="5">
-                        <label for="star5" title="5 stars"><i class="fa fa-star"></i></label>
-                        <input type="radio" id="star4" name="rating" value="4">
-                        <label for="star4" title="4 stars"><i class="fa fa-star"></i></label>
-                        <input type="radio" id="star3" name="rating" value="3">
-                        <label for="star3" title="3 stars"><i class="fa fa-star"></i></label>
-                        <input type="radio" id="star2" name="rating" value="2">
-                        <label for="star2" title="2 stars"><i class="fa fa-star"></i></label>
-                        <input type="radio" id="star1" name="rating" value="1">
-                        <label for="star1" title="1 star"><i class="fa fa-star"></i></label>
-                    </div>
-                    <button type="submit">Submit Comment</button>
-                </form>
-            </div>
-            {% else %}
-            <p>Please <a href="{% url 'auth_login' %}">login</a> to leave a review.</p>
-            {% endif %}
-            
-            <div class="card">
-                <div class="card__content">
-                    <span><i class="ri-double-quotes-l"></i></span>
-                    <div class="card__details">
-                        <p>Lovely ambience. Loved the food. Recommended 100%.</p>
-                        <h4>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </h4>
-                        <h5>Mark Webber</h5>
+    <header>
+        <a href="{% url 'home' %}">FoodFeed</a>
+    </header>
+
+    <div class="bd">
+        <div class="container">
+            <div class="container__right">
+                {% if user.is_authenticated %}
+                <div class="comment-box">
+                    <h2>Add your comments</h2>
+                    <form action="#" method="post">
+                        {% csrf_token %}
+                        <textarea name="comments" placeholder="Type Your Comments Here."></textarea>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5" title="5 stars"><i class="fa fa-star"></i></label>
+                            <input type="radio" id="star4" name="rating" valu="4">
+                            <label for="star4" title="4 stars"><i class="fa fa-star"></i></label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3" title="3 stars"><i class="fa fa-star"></i></label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2" title="2 stars"><i class="fa fa-star"></i></label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1" title="1 star"><i class="fa fa-star"></i></label>
+                        </div>
+                        <button type="submit">Submit Comment</button>
+                    </form>
+                </div>
+                {% else %}
+                <p>Please <a href="{% url 'login' %}">login</a> to leave a review.</p>
+                {% endif %}
+
+                <div class="card">
+                    <div class="card__content">
+                        <span><i class="ri-double-quotes-l"></i></span>
+                        <div class="card__details">
+                            <p>Lovely ambience. Loved the food. Recommended 100%.</p>
+                            <h4>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </h4>
+                            <h5>Mark Webber</h5>
+                        </div>
                     </div>
                 </div>
+                <!-- Additional card elements go here -->
             </div>
-            <!-- Additional card elements go here -->
         </div>
     </div>
-</div>
-   
+
 </body>
+
 </html>
