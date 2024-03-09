@@ -47,7 +47,8 @@
                         </li>
                         
                        <li class="menu-item">
-                          <a href="#"><i class="fas fa-user" id="about-us"></i> About Us</a>
+                        <a href="#footer"><i class="fas fa-message" id="contact-us"></i> Contact Us</a>
+                    </li>
                        </li>
                        <li class="menu-item">
                         <a href="{% url 'auth_login' %}">Login</a>
@@ -64,53 +65,42 @@
             <div class="container">
                 <div class="row">
                     <div class="cafe-col-1">
-                        <img src="images/lp.jpg">
+                        <img src="{% static 'images/Janta.png' %}" alt = "">
+                       
                     </div>
                     <div class="cafe-col-2">
                         <h1 class="subtitle">Janata Newari Food</h1>
                        
                         <div class="tab-titles">
                             <p class="tab-links active-link" onclick="opentab('info')">Information</p>
-                            <p class="tab-links" onclick="opentab('menu')">Menu</p>
-                            
-                            <p class="tab-links" onclick="opentab('location')">Location</p>
-                            <p class="tab-links" onclick="opentab('reviews')">Reviews</p>
+                            <p class="tab-links" onclick="opentab('menu')"><a>Menu</a></p>
+                            <p class="tab-links" onclick="opentab('review')"><a href="{% url 'auth_login' %}">Reviews</a></p>
                         </div>
                         <div class="tab-contents active-tab" id="info">
                             <ul>
                                 <li><span>Contact Number</span><br>+977 9812345678</li>
                                 <li><span>Status</span><br>Open From: 7:00 am - 9:00 pm</li>
                                 <li><span>Delivery Service Available</span><br></li>
+                                <li><span>Location</span><br><a href="https://www.google.com/maps/place/The+Station+Cafe/@27.6206684,85.5338813,17z/data=!4m10!1m2!2m1!1sstation+cafe+dhulikhel!3m6!1s0x39eb08dfa8aa40c1:0x1badf0cb4f283a0d!8m2!3d27.6206648!4d85.5386409!15sChZzdGF0aW9uIGNhZmUgZGh1bGlraGVsWhgiFnN0YXRpb24gY2FmZSBkaHVsaWtoZWySAQRjYWZl4AEA!16s%2Fg%2F11f2sgph_p?entry=ttu">KU Road Dhulikhel</a></li>
                             </ul>
                         </div>
+
                         <div class="tab-contents" id="menu">
-                            <ul>
-                                <li><span>Ideal Model School</span><br>High School</li>
-                                <li><span>Kathmandu University</span><br>Undergraduate</li>
-                            </ul>
+                            <div class="mimg">
+                                <img src="{% static 'images/janatamenu.jpg' %}" alt = "">
+                            
+                            </div>
                         </div>
+                        
                        
-                        <div class="tab-contents " id="location">
-                            <ul>
-                                <li><span>Front End Development</span><br>HTML, CSS, JavaScript</li>
-                                <li><span>Back End Development</span><br>MySQL, Java, PHP, Python, Git</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents " id="reviews">
-                            <ul>
-                                <li><span>Front End Development</span><br>HTML, CSS, JavaScript</li>
-                                <li><span>Back End Development</span><br>MySQL, Java, PHP, Python, Git</li>
-                            </ul>
-                        </div>
-                    </div>
                     </div>
                 </div>
-            </div>
         </div>
+    </div>
 
 
-        
-        <!---Contact-Us--->
+    
+    <!---Contact-Us--->
     <p>&nbsp;</p>
     <footer>
         <div class="footer_main">

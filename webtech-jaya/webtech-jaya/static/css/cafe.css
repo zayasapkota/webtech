@@ -301,6 +301,15 @@ a {
     position: relative;
 }
 
+.tab-links a{
+    text-decoration: none;
+    color: #ababab;
+    }
+
+    .tab-links a:hover{
+        color: #67db39;
+    }
+
 .tab-links::after {
     content: '';
     width: 0;
@@ -331,9 +340,28 @@ a {
     display: none;
 }
 
+.tab-contents ul li a{
+    text-decoration: none;
+    color: #ababab;
+}
+
 .tab-contents.active-tab {
     display: block;
 }
+
+.mimg{
+    width:100%
+    
+  }
+  
+  .class .mimg{
+      width: 50%;
+      border-radius: 10px;
+      display: block;
+      transition: transform 0.5s;
+      padding: 0, 200px;
+  }
+  
 
 /*---contact--*/
 footer {
@@ -395,6 +423,5 @@ footer .end span {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: none;
     border-radius: 15px;
 }
