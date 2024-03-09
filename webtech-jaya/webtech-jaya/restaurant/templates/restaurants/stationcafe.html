@@ -75,6 +75,7 @@
                             <p class="tab-links active-link" onclick="opentab('info')">Information</p>
                             <p class="tab-links" onclick="opentab('menu')"><a>Menu</a></p>
                             <p class="tab-links" onclick="opentab('review')"><a href="{% url 'auth_login' %}">Reviews</a></p>
+                            
                         </div>
                         
                         <div class="tab-contents active-tab" id="info">
@@ -89,7 +90,8 @@
                         <div class="tab-contents" id="menu">
                             <div class="mimg">
                             
-                                <img src="{% static 'images/stationmeu.jpg' %}" alt = "">
+                                <img src="{% static 'images/stationmeu.jpg' %}" alt = ""style="width: 100%; height: auto; float: left; margin-right: 20px;">
+                                >
                             </div>
                         </div>
                         
